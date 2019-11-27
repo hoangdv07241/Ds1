@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#373737"
+    tools:context=".HelpScreen">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textColor="#fff"
+        android:textSize="40sp"
+        android:layout_marginTop="100dp"
+        android:textAlignment="center"
+        android:text="Đọc kĩ câu hỏi và làm theo chỉ dẫn đến khi bạn đạt đủ 4 điểm để màn hình hiển thị đúng dòng này
+        WINNER"
+        />
+
+    <Button
+        android:layout_width="250dp"
+        android:layout_height="75dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="100dp"
+        android:textColor="#fff"
+        android:textSize="40sp"
+        android:text="ĐÃ HIỂU"
+        />
+
+</LinearLayout>
