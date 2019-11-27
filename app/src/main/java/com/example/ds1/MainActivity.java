@@ -3,14 +3,16 @@ package com.example.ds1;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity  implements ViewDS1{
 
-    Button btnStart,btnHelp,btnExit;
+    public Button btnStart,btnHelp,btnExit;
     PresenterDS1 presenterDS1;
+    final MediaPlayer mp = MediaPlayer.create(this,R.raw.button_click);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,9 +24,17 @@ public class MainActivity extends AppCompatActivity  implements ViewDS1{
         btnExit = findViewById(R.id.btnExit);
         presenterDS1 = new PresenterDS1(this);
 
+        btnStart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mp.start();
+            }
+        });
+
         btnHelp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                mp.start();
                 presenterDS1.Help();
             }
         });
@@ -32,6 +42,7 @@ public class MainActivity extends AppCompatActivity  implements ViewDS1{
         btnExit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                mp.start();
                 presenterDS1.Exit();
             }
         });
@@ -47,6 +58,7 @@ public class MainActivity extends AppCompatActivity  implements ViewDS1{
     public void Help() {
         Intent intent = new Intent(MainActivity.this,HelpScreen.class);
         startActivity(intent);
+        overridePendingTransition(R.anim.fadein,R.anim.fadeout);
     }
 
     @Override

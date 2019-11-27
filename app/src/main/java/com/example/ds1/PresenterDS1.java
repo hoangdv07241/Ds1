@@ -8,6 +8,10 @@ public class PresenterDS1 {
         this.viewDS1 = viewDS1;
     }
 
+    void ActivitiesNavigate(){
+        viewDS1.ActivitiesNavigate();
+    }
+
     void Help(){
         viewDS1.Help();
     }
