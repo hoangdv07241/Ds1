@@ -7,58 +7,49 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageView;
 
 import com.example.ds1.databinding.ActivityQ1Binding;
 
-public class Q1 extends AppCompatActivity implements ViewDS1 {
+public class Q2 extends AppCompatActivity implements ViewDS1 {
 
-    Button btnC1Q1, btnC2Q1, btnC3Q1, btnC4Q1;
-    ImageView ivReset;
+    Button btnC1Q2, btnC2Q2, btnC3Q2, btnC4Q2;
     PresenterDS1 presenterDS1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ActivityQ1Binding binding = DataBindingUtil.setContentView(this, R.layout.activity_q1);
-        TextBinding textBinding = new TextBinding("Chọn số thích hợp", "3", "2", "3", "5", "4");
+        ActivityQ1Binding binding = DataBindingUtil.setContentView(this, R.layout.activity_q2);
+        TextBinding textBinding = new TextBinding("Chọn ô chữ thích hợp", "1", "one", "1", "3", "một");
         binding.setTextBinding(textBinding);
 
-        ivReset = findViewById(R.id.ivReset);
-        btnC1Q1 = findViewById(R.id.btnC1Q1);
-        btnC2Q1 = findViewById(R.id.btnC2Q1);
-        btnC3Q1 = findViewById(R.id.btnC3Q1);
-        btnC4Q1 = findViewById(R.id.btnC4Q1);
         presenterDS1 = new PresenterDS1(this);
+        btnC1Q2 = findViewById(R.id.btnC1Q2);
+        btnC2Q2 = findViewById(R.id.btnC2Q2);
+        btnC3Q2 = findViewById(R.id.btnC3Q2);
+        btnC4Q2 = findViewById(R.id.btnC4Q2);
 
-        ivReset.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                presenterDS1.Reset();
-            }
-        });
-        btnC1Q1.setOnClickListener(new View.OnClickListener() {
+        btnC1Q2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 presenterDS1.Wrong();
             }
         });
-        btnC2Q1.setOnClickListener(new View.OnClickListener() {
+        btnC2Q2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 presenterDS1.Wrong();
             }
         });
-        btnC3Q1.setOnClickListener(new View.OnClickListener() {
+        btnC3Q2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                presenterDS1.Wrong();
+            }
+        });
+        btnC4Q2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 presenterDS1.Right();
-            }
-        });
-        btnC4Q1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                presenterDS1.Wrong();
             }
         });
     }
@@ -70,9 +61,7 @@ public class Q1 extends AppCompatActivity implements ViewDS1 {
 
     @Override
     public void Reset() {
-        Intent intent = new Intent(this, MainActivity.class);
-        finish();
-        startActivity(intent);
+
     }
 
     @Override
@@ -82,9 +71,7 @@ public class Q1 extends AppCompatActivity implements ViewDS1 {
 
     @Override
     public void Right() {
-        Intent intent = new Intent(this, Q2.class);
-        finish();
-        startActivity(intent);
+
     }
 
     @Override
