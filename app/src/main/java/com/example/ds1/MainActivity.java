@@ -21,14 +21,13 @@ public class MainActivity extends AppCompatActivity  implements ViewDS1{
         super.onCreate(savedInstanceState);
         ActivityMainBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
 
-        TextBinding textBinding = new TextBinding("RANDOM CHOICE GAME","START","HELP","EXIT",null,null);
+        TextBinding textBinding = new TextBinding("RANDOM CHOICE GAME","START","HELP",null,null,null);
 
         binding.setTextBinding(textBinding);
 
         //final MediaPlayer mp = MediaPlayer.create(this,R.raw.button_click);
         btnStart = findViewById(R.id.btnStart);
         btnHelp = findViewById(R.id.btnHelp);
-        btnExit = findViewById(R.id.btnExit);
         presenterDS1 = new PresenterDS1(this);
 
         btnStart.setOnClickListener(new View.OnClickListener() {
@@ -47,20 +46,13 @@ public class MainActivity extends AppCompatActivity  implements ViewDS1{
             }
         });
 
-        btnExit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                //mp.start();
-                finish();
-                presenterDS1.Exit();
-            }
-        });
     }
 
 
     @Override
     public void ActivitiesNavigate() {
         Intent intent = new Intent(MainActivity.this,Q1.class);
+        finish();
         startActivity(intent);
     }
 
@@ -72,6 +64,7 @@ public class MainActivity extends AppCompatActivity  implements ViewDS1{
     @Override
     public void Help() {
         Intent intent = new Intent(MainActivity.this,HelpScreen.class);
+        finish();
         startActivity(intent);
     }
 

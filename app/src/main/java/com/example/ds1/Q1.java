@@ -71,6 +71,7 @@ public class Q1 extends AppCompatActivity implements ViewDS1 {
     @Override
     public void Reset() {
         Intent intent = new Intent(this, MainActivity.class);
+        finish();
         startActivity(intent);
     }
 
@@ -87,6 +88,7 @@ public class Q1 extends AppCompatActivity implements ViewDS1 {
     @Override
     public void Wrong() {
         Intent intent = new Intent(this, Lose.class);
+        finish();
         startActivity(intent);
     }
 

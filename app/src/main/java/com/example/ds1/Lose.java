@@ -36,6 +36,7 @@ public class Lose extends AppCompatActivity implements ViewDS1 {
     @Override
     public void ActivitiesNavigate() {
         Intent intent = new Intent(this, MainActivity.class);
+        finish();
         startActivity(intent);
     }
 

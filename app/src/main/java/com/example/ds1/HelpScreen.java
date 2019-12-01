@@ -39,6 +39,7 @@ public class HelpScreen extends AppCompatActivity implements ViewDS1 {
     @Override
     public void ActivitiesNavigate() {
         Intent intent = new Intent(this, MainActivity.class);
+        finish();
         startActivity(intent);
     }
 
