@@ -12,8 +12,20 @@ public class PresenterDS1 {
         viewDS1.ActivitiesNavigate();
     }
 
+    void Reset(){
+        viewDS1.Reset();
+    }
+
     void Help(){
         viewDS1.Help();
+    }
+
+    void Right(){
+        viewDS1.Right();
+    }
+
+    void Wrong(){
+        viewDS1.Wrong();
     }
 
     void Exit(){

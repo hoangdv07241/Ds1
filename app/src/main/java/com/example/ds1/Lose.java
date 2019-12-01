@@ -8,32 +8,29 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.example.ds1.databinding.ActivityHelpScreenBinding;
-import com.example.ds1.databinding.ActivityMainBinding;
+import com.example.ds1.databinding.ActivityLoseBinding;
 
-public class HelpScreen extends AppCompatActivity implements ViewDS1 {
+public class Lose extends AppCompatActivity implements ViewDS1 {
 
-    Button btnReturn;
+    Button btnLoseReturn;
     PresenterDS1 presenterDS1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ActivityHelpScreenBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_help_screen);
-
-        TextBinding textBinding = new TextBinding("Đọc kĩ câu hỏi và làm theo chỉ dẫn đến khi " +
-                "bạn đạt đủ 4 điểm để màn hình hiển thị đúng dòng này WINNER", "ĐÃ HIỂU", null, null, null, null);
-
+        ActivityLoseBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_lose);
+        TextBinding textBinding = new TextBinding("Bạn đã THUA", "Quay lại", null, null, null, null);
         binding.setTextBinding(textBinding);
 
-        btnReturn = findViewById(R.id.btnReturn);
         presenterDS1 = new PresenterDS1(this);
-        btnReturn.setOnClickListener(new View.OnClickListener() {
+        btnLoseReturn = findViewById(R.id.btnLoseReturn);
+        btnLoseReturn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 presenterDS1.ActivitiesNavigate();
             }
         });
+
     }
 
     @Override

@@ -1,6 +1,7 @@
 package com.example.ds1;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
 
 import android.content.Intent;
 import android.media.MediaPlayer;
@@ -8,17 +9,23 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.ds1.databinding.ActivityMainBinding;
+
 public class MainActivity extends AppCompatActivity  implements ViewDS1{
 
     public Button btnStart,btnHelp,btnExit;
     PresenterDS1 presenterDS1;
-    final MediaPlayer mp = MediaPlayer.create(this,R.raw.button_click);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        ActivityMainBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
 
+        TextBinding textBinding = new TextBinding("RANDOM CHOICE GAME","START","HELP","EXIT",null,null);
+
+        binding.setTextBinding(textBinding);
+
+        //final MediaPlayer mp = MediaPlayer.create(this,R.raw.button_click);
         btnStart = findViewById(R.id.btnStart);
         btnHelp = findViewById(R.id.btnHelp);
         btnExit = findViewById(R.id.btnExit);
@@ -27,14 +34,15 @@ public class MainActivity extends AppCompatActivity  implements ViewDS1{
         btnStart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mp.start();
+                //mp.start();
+                presenterDS1.ActivitiesNavigate();
             }
         });
 
         btnHelp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mp.start();
+                //mp.start();
                 presenterDS1.Help();
             }
         });
@@ -42,7 +50,8 @@ public class MainActivity extends AppCompatActivity  implements ViewDS1{
         btnExit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mp.start();
+                //mp.start();
+                finish();
                 presenterDS1.Exit();
             }
         });
@@ -51,6 +60,12 @@ public class MainActivity extends AppCompatActivity  implements ViewDS1{
 
     @Override
     public void ActivitiesNavigate() {
+        Intent intent = new Intent(MainActivity.this,Q1.class);
+        startActivity(intent);
+    }
+
+    @Override
+    public void Reset() {
 
     }
 
@@ -58,7 +73,11 @@ public class MainActivity extends AppCompatActivity  implements ViewDS1{
     public void Help() {
         Intent intent = new Intent(MainActivity.this,HelpScreen.class);
         startActivity(intent);
-        overridePendingTransition(R.anim.fadein,R.anim.fadeout);
+    }
+
+    @Override
+    public void Right() {
+
     }
 
     @Override
