@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity  implements ViewDS1{
 
         binding.setTextBinding(textBinding);
 
-        //final MediaPlayer mp = MediaPlayer.create(this,R.raw.button_click);
+        final MediaPlayer mp = MediaPlayer.create(this,R.raw.button_click);
         btnStart = findViewById(R.id.btnStart);
         btnHelp = findViewById(R.id.btnHelp);
         presenterDS1 = new PresenterDS1(this);
@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity  implements ViewDS1{
         btnStart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //mp.start();
+                mp.start();
                 presenterDS1.ActivitiesNavigate();
             }
         });
@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity  implements ViewDS1{
         btnHelp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //mp.start();
+                mp.start();
                 presenterDS1.Help();
             }
         });

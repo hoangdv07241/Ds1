@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -24,6 +25,9 @@ public class Q1 extends AppCompatActivity implements ViewDS1 {
         TextBinding textBinding = new TextBinding("Chọn số thích hợp", "3", "2", "3", "5", "4");
         binding.setTextBinding(textBinding);
 
+        final MediaPlayer mp = MediaPlayer.create(this,R.raw.ding);
+        final MediaPlayer mp2 = MediaPlayer.create(this,R.raw.button_click);
+        final MediaPlayer mp3 = MediaPlayer.create(this,R.raw.rewind);
         ivReset = findViewById(R.id.ivReset);
         btnC1Q1 = findViewById(R.id.btnC1Q1);
         btnC2Q1 = findViewById(R.id.btnC2Q1);
@@ -34,6 +38,7 @@ public class Q1 extends AppCompatActivity implements ViewDS1 {
         ivReset.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                mp3.start();
                 presenterDS1.Reset();
             }
         });
@@ -52,6 +57,7 @@ public class Q1 extends AppCompatActivity implements ViewDS1 {
         btnC3Q1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                mp.start();
                 presenterDS1.Right();
             }
         });
