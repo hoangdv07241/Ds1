@@ -25,9 +25,9 @@ public class Q1 extends AppCompatActivity implements ViewDS1 {
         TextBinding textBinding = new TextBinding("Chọn số thích hợp", "3", "2", "3", "5", "4");
         binding.setTextBinding(textBinding);
 
-        final MediaPlayer mp = MediaPlayer.create(this,R.raw.ding);
-        final MediaPlayer mp2 = MediaPlayer.create(this,R.raw.button_click);
-        final MediaPlayer mp3 = MediaPlayer.create(this,R.raw.rewind);
+        final MediaPlayer mp = MediaPlayer.create(this, R.raw.ding);
+        final MediaPlayer mp2 = MediaPlayer.create(this, R.raw.button_click);
+        final MediaPlayer mp3 = MediaPlayer.create(this, R.raw.rewind);
         ivReset = findViewById(R.id.ivReset);
         btnC1Q1 = findViewById(R.id.btnC1Q1);
         btnC2Q1 = findViewById(R.id.btnC2Q1);
