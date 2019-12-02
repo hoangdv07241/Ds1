@@ -10,14 +10,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
-import com.example.ds1.databinding.ActivityQ1Binding;
 import com.example.ds1.databinding.ActivityQ2Binding;
 
-public class Q2 extends AppCompatActivity implements ViewDS1 {
+public class Q2 extends AppCompatActivity implements ViewDs1 {
 
     ImageView ivQ2Reset,ivQ2Home;
     Button btnC1Q2, btnC2Q2, btnC3Q2, btnC4Q2;
-    PresenterDS1 presenterDS1;
+    PresenterDs1 presenterDS1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +25,7 @@ public class Q2 extends AppCompatActivity implements ViewDS1 {
         TextBinding textBinding = new TextBinding("Chọn ô chữ thích hợp", "1", "one", "1", "3", "một");
         binding.setTextBinding(textBinding);
 
-        presenterDS1 = new PresenterDS1(this);
+        presenterDS1 = new PresenterDs1(this);
         final MediaPlayer mp = MediaPlayer.create(this,R.raw.ding);
         final MediaPlayer mp2 = MediaPlayer.create(this,R.raw.rewind);
         ivQ2Reset = findViewById(R.id.ivQ2Reset);

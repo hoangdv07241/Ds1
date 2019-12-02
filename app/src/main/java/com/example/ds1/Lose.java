@@ -11,10 +11,10 @@ import android.widget.Button;
 
 import com.example.ds1.databinding.ActivityLoseBinding;
 
-public class Lose extends AppCompatActivity implements ViewDS1 {
+public class Lose extends AppCompatActivity implements ViewDs1 {
 
     Button btnLoseReturn;
-    PresenterDS1 presenterDS1;
+    PresenterDs1 presenterDS1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +26,7 @@ public class Lose extends AppCompatActivity implements ViewDS1 {
         final MediaPlayer mp = MediaPlayer.create(this,R.raw.gameover);
         final MediaPlayer mp2 = MediaPlayer.create(this,R.raw.button_click);
         mp.start();
-        presenterDS1 = new PresenterDS1(this);
+        presenterDS1 = new PresenterDs1(this);
         btnLoseReturn = findViewById(R.id.btnLoseReturn);
         btnLoseReturn.setOnClickListener(new View.OnClickListener() {
             @Override

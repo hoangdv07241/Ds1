@@ -1,10 +1,10 @@
 package com.example.ds1;
 
-public class PresenterDS1 {
+public class PresenterDs1 {
 
-    private ViewDS1 viewDS1;
+    private ViewDs1 viewDS1;
 
-    public PresenterDS1(ViewDS1 viewDS1) {
+    public PresenterDs1(ViewDs1 viewDS1) {
         this.viewDS1 = viewDS1;
     }
 

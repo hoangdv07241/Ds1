@@ -12,11 +12,11 @@ import android.widget.ImageView;
 
 import com.example.ds1.databinding.ActivityQ1Binding;
 
-public class Q1 extends AppCompatActivity implements ViewDS1 {
+public class Q1 extends AppCompatActivity implements ViewDs1 {
 
     Button btnC1Q1, btnC2Q1, btnC3Q1, btnC4Q1;
     ImageView ivReset;
-    PresenterDS1 presenterDS1;
+    PresenterDs1 presenterDS1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +33,7 @@ public class Q1 extends AppCompatActivity implements ViewDS1 {
         btnC2Q1 = findViewById(R.id.btnC2Q1);
         btnC3Q1 = findViewById(R.id.btnC3Q1);
         btnC4Q1 = findViewById(R.id.btnC4Q1);
-        presenterDS1 = new PresenterDS1(this);
+        presenterDS1 = new PresenterDs1(this);
 
         ivReset.setOnClickListener(new View.OnClickListener() {
             @Override

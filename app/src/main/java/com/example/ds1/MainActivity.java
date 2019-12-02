@@ -11,10 +11,10 @@ import android.widget.Button;
 
 import com.example.ds1.databinding.ActivityMainBinding;
 
-public class MainActivity extends AppCompatActivity  implements ViewDS1{
+public class MainActivity extends AppCompatActivity  implements ViewDs1 {
 
     public Button btnStart,btnHelp,btnExit;
-    PresenterDS1 presenterDS1;
+    PresenterDs1 presenterDS1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity  implements ViewDS1{
         final MediaPlayer mp = MediaPlayer.create(this,R.raw.button_click);
         btnStart = findViewById(R.id.btnStart);
         btnHelp = findViewById(R.id.btnHelp);
-        presenterDS1 = new PresenterDS1(this);
+        presenterDS1 = new PresenterDs1(this);
 
         btnStart.setOnClickListener(new View.OnClickListener() {
             @Override

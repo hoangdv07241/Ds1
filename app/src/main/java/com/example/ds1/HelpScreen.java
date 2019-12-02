@@ -10,12 +10,11 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.ds1.databinding.ActivityHelpScreenBinding;
-import com.example.ds1.databinding.ActivityMainBinding;
 
-public class HelpScreen extends AppCompatActivity implements ViewDS1 {
+public class HelpScreen extends AppCompatActivity implements ViewDs1 {
 
     Button btnReturn;
-    PresenterDS1 presenterDS1;
+    PresenterDs1 presenterDS1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +28,7 @@ public class HelpScreen extends AppCompatActivity implements ViewDS1 {
 
         final MediaPlayer mp = MediaPlayer.create(this,R.raw.button_click);
         btnReturn = findViewById(R.id.btnReturn);
-        presenterDS1 = new PresenterDS1(this);
+        presenterDS1 = new PresenterDs1(this);
         btnReturn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
