@@ -15,7 +15,7 @@ import com.example.ds1.databinding.ActivityQ2Binding;
 
 public class Q2 extends AppCompatActivity implements ViewDS1 {
 
-    ImageView ivQ2Reset;
+    ImageView ivQ2Reset,ivQ2Home;
     Button btnC1Q2, btnC2Q2, btnC3Q2, btnC4Q2;
     PresenterDS1 presenterDS1;
 
@@ -30,6 +30,7 @@ public class Q2 extends AppCompatActivity implements ViewDS1 {
         final MediaPlayer mp = MediaPlayer.create(this,R.raw.ding);
         final MediaPlayer mp2 = MediaPlayer.create(this,R.raw.rewind);
         ivQ2Reset = findViewById(R.id.ivQ2Reset);
+        ivQ2Home = findViewById(R.id.ivQ2Home);
         btnC1Q2 = findViewById(R.id.btnC1Q2);
         btnC2Q2 = findViewById(R.id.btnC2Q2);
         btnC3Q2 = findViewById(R.id.btnC3Q2);
@@ -40,6 +41,12 @@ public class Q2 extends AppCompatActivity implements ViewDS1 {
             public void onClick(View view) {
                 mp2.start();
                 presenterDS1.Reset();
+            }
+        });
+        ivQ2Home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                presenterDS1.ActivitiesNavigate();
             }
         });
         btnC1Q2.setOnClickListener(new View.OnClickListener() {
@@ -71,12 +78,14 @@ public class Q2 extends AppCompatActivity implements ViewDS1 {
 
     @Override
     public void ActivitiesNavigate() {
-
+        Intent intent = new Intent(this, MainActivity.class);
+        finish();
+        startActivity(intent);
     }
 
     @Override
     public void Reset() {
-        Intent intent = new Intent(this, MainActivity.class);
+        Intent intent = new Intent(this, Q1.class);
         finish();
         startActivity(intent);
     }
