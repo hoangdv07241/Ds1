@@ -120,7 +120,9 @@ public class Q2 extends AppCompatActivity implements ViewDs1 {
 
     @Override
     public void Right() {
-
+        Intent intent = new Intent(this, Q3.class);
+        finish();
+        startActivity(intent);
     }
 
     @Override
@@ -131,7 +133,7 @@ public class Q2 extends AppCompatActivity implements ViewDs1 {
     }
 
     @Override
-    public void Exit() {
+    public void Other() {
 
     }
 }

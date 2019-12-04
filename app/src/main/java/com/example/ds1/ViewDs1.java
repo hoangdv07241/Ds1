@@ -6,5 +6,5 @@ public interface ViewDs1 {
     void Help();
     void Right();
     void Wrong();
-    void Exit();
+    void Other();
 }

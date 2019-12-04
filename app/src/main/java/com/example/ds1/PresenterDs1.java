@@ -28,7 +28,7 @@ public class PresenterDs1 {
         viewDS1.Wrong();
     }
 
-    void Exit(){
-        viewDS1.Exit();
+    void Other(){
+        viewDS1.Other();
     }
 }

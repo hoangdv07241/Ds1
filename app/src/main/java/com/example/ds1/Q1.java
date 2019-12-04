@@ -124,7 +124,7 @@ public class Q1 extends AppCompatActivity implements ViewDs1 {
     }
 
     @Override
-    public void Exit() {
+    public void Other() {
 
     }
 }

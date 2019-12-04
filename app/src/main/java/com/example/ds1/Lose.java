@@ -66,7 +66,7 @@ public class Lose extends AppCompatActivity implements ViewDs1 {
     }
 
     @Override
-    public void Exit() {
+    public void Other() {
 
     }
 }
