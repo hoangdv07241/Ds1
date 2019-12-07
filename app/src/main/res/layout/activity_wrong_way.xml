@@ -13,7 +13,7 @@
         android:layout_height="match_parent"
         android:background="#373737"
         android:orientation="vertical"
-        tools:context=".Lose">
+        tools:context=".WrongWay">
 
         <TextView
             android:layout_width="match_parent"
@@ -30,10 +30,10 @@
             android:layout_height="250dp"
             android:layout_gravity="center"
             android:layout_marginTop="50sp"
-            android:src="@drawable/sad_icon" />
+            android:src="@drawable/stop_icon" />
 
         <Button
-            android:id="@+id/btnLoseReturn"
+            android:id="@+id/btnWrongReturn"
             android:layout_width="250dp"
             android:layout_height="75dp"
             android:layout_gravity="center"

@@ -39,7 +39,7 @@ public class Q1 extends AppCompatActivity implements ViewDs1 {
         btnC4Q1 = findViewById(R.id.btnC4Q1);
         presenterDS1 = new PresenterDs1(this);
 
-        final CountDownTimer countDownTimer = new CountDownTimer(5000, 1000) {
+        final CountDownTimer countDownTimer = new CountDownTimer(11000, 1000) {
             @Override
             public void onTick(long l) {
                 tvSc.setText(String.valueOf(l / 1000));
