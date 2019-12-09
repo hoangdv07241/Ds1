@@ -26,6 +26,7 @@
         />
 
     <TextView
+        android:id="@+id/tvTitle1"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:text="@{TextBinding.text1}"
@@ -33,6 +34,28 @@
         android:textAlignment="center"
         android:textColor="#fff"
         android:layout_marginTop="80dp"
+        android:layout_gravity="center"
+        />
+
+    <TextView
+        android:id="@+id/tvTitle2"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:text="@{TextBinding.text2}"
+        android:textSize="50sp"
+        android:textAlignment="center"
+        android:textColor="#fff"
+        android:layout_gravity="center"
+        />
+
+    <TextView
+        android:id="@+id/tvTitle3"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:text="@{TextBinding.text3}"
+        android:textSize="50sp"
+        android:textAlignment="center"
+        android:textColor="#fff"
         android:layout_gravity="center"
         />
 
@@ -44,7 +67,7 @@
         android:textColor="#fff"
         android:background="#95989A"
         android:textSize="40sp"
-        android:text="@{TextBinding.text2}"
+        android:text="@{TextBinding.text4}"
         android:layout_gravity="center"
         />
 
@@ -56,7 +79,7 @@
         android:textColor="#fff"
         android:background="#95989A"
         android:textSize="40sp"
-        android:text="@{TextBinding.text3}"
+        android:text="@{TextBinding.text5}"
         android:layout_gravity="center"
         />
 

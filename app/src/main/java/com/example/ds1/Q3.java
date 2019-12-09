@@ -22,6 +22,7 @@ public class Q3 extends AppCompatActivity implements ViewDs1{
     ImageView ivQ3home;
     TextView tvQ3up,tvQ3left,tvQ3right,tvQ3down,tvQ3sc;
     PresenterDs1 presenterDs1;
+    GeraralFunction gf;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +32,7 @@ public class Q3 extends AppCompatActivity implements ViewDs1{
         binding.setTextBinding(textBinding);
 
         presenterDs1 = new PresenterDs1(this);
+        gf = new GeraralFunction();
         ivQ3home = findViewById(R.id.ivQ3home);
         tvQ3sc = findViewById(R.id.tvQ3sc);
         tvQ3up = findViewById(R.id.tvQ3up);
@@ -38,7 +40,7 @@ public class Q3 extends AppCompatActivity implements ViewDs1{
         tvQ3right = findViewById(R.id.tvQ3right);
         tvQ3down = findViewById(R.id.tvQ3down);
 
-        TextAnim(tvQ3up);
+        gf.TextAnim(tvQ3up,Color.WHITE,Color.RED);
         final CountDownTimer countDownTimer = new CountDownTimer(11000, 1000) {
             @Override
             public void onTick(long l) {
@@ -71,18 +73,21 @@ public class Q3 extends AppCompatActivity implements ViewDs1{
             @Override
             public void onClick(View view) {
                 countDownTimer.cancel();
+                presenterDs1.Right();
             }
         });
         tvQ3right.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 countDownTimer.cancel();
+                presenterDs1.Wrong();
             }
         });
         tvQ3down.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 countDownTimer.cancel();
+                presenterDs1.Wrong();
             }
         });
     }
@@ -106,7 +111,9 @@ public class Q3 extends AppCompatActivity implements ViewDs1{
 
     @Override
     public void Right() {
-
+        Intent intent = new Intent(this, Q4.class);
+        finish();
+        startActivity(intent);
     }
 
     @Override

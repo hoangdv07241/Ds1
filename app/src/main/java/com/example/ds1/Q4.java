@@ -12,48 +12,49 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.ds1.databinding.ActivityQ2Binding;
+import com.example.ds1.databinding.ActivityQ4Binding;
 
-public class Q2 extends AppCompatActivity implements ViewDs1 {
+public class Q4 extends AppCompatActivity implements ViewDs1{
 
-    TextView tvQ2sc;
-    ImageView ivQ2Reset, ivQ2Home;
-    Button btnC1Q2, btnC2Q2, btnC3Q2, btnC4Q2;
+    TextView tvQ4sc;
+    ImageView ivQ4Reset, ivQ4Home;
+    Button btnC1Q4, btnC2Q4, btnC3Q4, btnC4Q4;
     PresenterDs1 presenterDS1;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ActivityQ2Binding binding = DataBindingUtil.setContentView(this, R.layout.activity_q2);
+        ActivityQ4Binding binding = DataBindingUtil.setContentView(this, R.layout.activity_q4);
         TextBinding textBinding = new TextBinding("Chọn ô chữ thích hợp", "1", "one", "1", "3", "một");
         binding.setTextBinding(textBinding);
 
         presenterDS1 = new PresenterDs1(this);
         final MediaPlayer mp = MediaPlayer.create(this, R.raw.ding);
         final MediaPlayer mp2 = MediaPlayer.create(this, R.raw.rewind);
-        tvQ2sc = findViewById(R.id.tvQ2sc);
-        ivQ2Reset = findViewById(R.id.ivQ2Reset);
-        ivQ2Home = findViewById(R.id.ivQ2Home);
-        btnC1Q2 = findViewById(R.id.btnC1Q2);
-        btnC2Q2 = findViewById(R.id.btnC2Q2);
-        btnC3Q2 = findViewById(R.id.btnC3Q2);
-        btnC4Q2 = findViewById(R.id.btnC4Q2);
+        tvQ4sc = findViewById(R.id.tvQ4sc);
+        ivQ4Reset = findViewById(R.id.ivQ4Reset);
+        ivQ4Home = findViewById(R.id.ivQ4Home);
+        btnC1Q4 = findViewById(R.id.btnC1Q4);
+        btnC2Q4 = findViewById(R.id.btnC2Q4);
+        btnC3Q4 = findViewById(R.id.btnC3Q4);
+        btnC4Q4 = findViewById(R.id.btnC4Q4);
 
         final CountDownTimer countDownTimer = new CountDownTimer(11000, 1000) {
             @Override
             public void onTick(long l) {
-                tvQ2sc.setText(String.valueOf(l / 1000));
+                tvQ4sc.setText(String.valueOf(l / 1000));
             }
 
             @Override
             public void onFinish() {
-                Intent intent = new Intent(Q2.this, Lose.class);
+                Intent intent = new Intent(Q4.this, Lose.class);
                 finish();
                 startActivity(intent);
             }
         }.start();
 
-        ivQ2Reset.setOnClickListener(new View.OnClickListener() {
+        ivQ4Reset.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 mp2.start();
@@ -61,42 +62,42 @@ public class Q2 extends AppCompatActivity implements ViewDs1 {
                 presenterDS1.Reset();
             }
         });
-        ivQ2Home.setOnClickListener(new View.OnClickListener() {
+        ivQ4Home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 countDownTimer.cancel();
                 presenterDS1.ActivitiesNavigate();
             }
         });
-        btnC1Q2.setOnClickListener(new View.OnClickListener() {
+        btnC1Q4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 countDownTimer.cancel();
                 presenterDS1.Wrong();
             }
         });
-        btnC2Q2.setOnClickListener(new View.OnClickListener() {
+        btnC2Q4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 countDownTimer.cancel();
                 presenterDS1.Wrong();
             }
         });
-        btnC3Q2.setOnClickListener(new View.OnClickListener() {
+        btnC3Q4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 countDownTimer.cancel();
                 presenterDS1.Wrong();
             }
         });
-        btnC4Q2.setOnClickListener(new View.OnClickListener() {
+        btnC4Q4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 countDownTimer.cancel();
-                mp.start();
-                presenterDS1.Right();
+                presenterDS1.Wrong();
             }
         });
+
     }
 
     @Override
@@ -120,9 +121,7 @@ public class Q2 extends AppCompatActivity implements ViewDs1 {
 
     @Override
     public void Right() {
-        Intent intent = new Intent(this, Q3.class);
-        finish();
-        startActivity(intent);
+
     }
 
     @Override

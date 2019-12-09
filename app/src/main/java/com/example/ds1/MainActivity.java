@@ -4,31 +4,46 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.example.ds1.databinding.ActivityMainBinding;
 
-public class MainActivity extends AppCompatActivity  implements ViewDs1 {
+public class MainActivity extends AppCompatActivity implements ViewDs1 {
 
-    public Button btnStart,btnHelp,btnExit;
+    public Button btnStart, btnHelp, btnExit;
+    TextView tvTile1,tvTile2,tvTile3;
     PresenterDs1 presenterDS1;
+    GeraralFunction gf1,gf2,gf3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         ActivityMainBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
 
-        TextBinding textBinding = new TextBinding("RANDOM CHOICE GAME","START","HELP",null,null,null);
+        TextBinding textBinding = new TextBinding("RANDOM", "CHOICE", "GAME", "START", "HELP", null);
 
         binding.setTextBinding(textBinding);
 
-        final MediaPlayer mp = MediaPlayer.create(this,R.raw.button_click);
+        final MediaPlayer mp = MediaPlayer.create(this, R.raw.button_click);
+        presenterDS1 = new PresenterDs1(this);
+        gf1 = new GeraralFunction();
+        gf2 = new GeraralFunction();
+        gf3 = new GeraralFunction();
+
+        tvTile1 = findViewById(R.id.tvTitle1);
+        tvTile2 = findViewById(R.id.tvTitle2);
+        tvTile3 = findViewById(R.id.tvTitle3);
         btnStart = findViewById(R.id.btnStart);
         btnHelp = findViewById(R.id.btnHelp);
-        presenterDS1 = new PresenterDs1(this);
+
+        gf1.TextAnim(tvTile1, Color.WHITE,Color.RED);
+        gf2.TextAnim(tvTile2, Color.GREEN, Color.WHITE);
+        gf3.TextAnim(tvTile3, Color.WHITE, Color.BLUE);
 
         btnStart.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -51,7 +66,7 @@ public class MainActivity extends AppCompatActivity  implements ViewDs1 {
 
     @Override
     public void ActivitiesNavigate() {
-        Intent intent = new Intent(MainActivity.this,Q1.class);
+        Intent intent = new Intent(MainActivity.this, Q1.class);
         finish();
         startActivity(intent);
     }
@@ -63,7 +78,7 @@ public class MainActivity extends AppCompatActivity  implements ViewDs1 {
 
     @Override
     public void Help() {
-        Intent intent = new Intent(MainActivity.this,HelpScreen.class);
+        Intent intent = new Intent(MainActivity.this, HelpScreen.class);
         finish();
         startActivity(intent);
     }
