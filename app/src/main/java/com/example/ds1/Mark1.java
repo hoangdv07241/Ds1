@@ -36,6 +36,7 @@ public class Mark1 extends AppCompatActivity implements ViewDs1{
                 presenterDS1.ActivitiesNavigate();
                 score++;
                 if(score == 4){
+                    score = score - 4;
                     presenterDS1.Right();
                 }
             }
