@@ -13,7 +13,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.ds1.databinding.ActivityQ7d1Binding;
-import com.example.ds1.databinding.ActivityQ7u2Binding;
 
 public class Q7d1 extends AppCompatActivity implements ViewDs1 {
 
@@ -79,8 +78,9 @@ public class Q7d1 extends AppCompatActivity implements ViewDs1 {
         btnC1Q7d1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                mp.start();
                 countDownTimer.cancel();
-                presenterDS1.Wrong();
+                presenterDS1.Right();
             }
         });
         btnC2Q7d1.setOnClickListener(new View.OnClickListener() {
@@ -128,7 +128,7 @@ public class Q7d1 extends AppCompatActivity implements ViewDs1 {
 
     @Override
     public void Right() {
-        Intent intent = new Intent(this, Mark1.class);
+        Intent intent = new Intent(this, Q7d2.class);
         finish();
         startActivity(intent);
     }
