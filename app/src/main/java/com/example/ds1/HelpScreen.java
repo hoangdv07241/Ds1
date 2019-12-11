@@ -21,8 +21,8 @@ public class HelpScreen extends AppCompatActivity implements ViewDs1 {
         super.onCreate(savedInstanceState);
         ActivityHelpScreenBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_help_screen);
 
-        TextBinding textBinding = new TextBinding("Đọc kĩ câu hỏi và làm theo chỉ dẫn đến khi " +
-                "bạn đạt đủ 4 điểm để màn hình hiển thị đúng dòng này WINNER", "ĐÃ HIỂU", null, null, null, null);
+        TextBinding textBinding = new TextBinding("Đọc kĩ câu hỏi và trả lời đến khi " +
+                "bạn đạt đủ 4 điểm để hoàn thành trò chơi.", "ĐÃ HIỂU", null, null, null, null);
 
         binding.setTextBinding(textBinding);
 
