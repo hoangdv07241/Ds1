@@ -13,6 +13,7 @@ import com.example.ds1.databinding.ActivityMark1Binding;
 
 public class Mark1 extends AppCompatActivity implements ViewDs1{
 
+    public static int score = 0;
     Button btnMarkReturn;
     PresenterDs1 presenterDS1;
 
@@ -33,7 +34,10 @@ public class Mark1 extends AppCompatActivity implements ViewDs1{
             @Override
             public void onClick(View view) {
                 presenterDS1.ActivitiesNavigate();
-                GeneralFunction.score++;
+                score++;
+                if(score == 4){
+                    presenterDS1.Right();
+                }
             }
         });
     }
@@ -41,7 +45,6 @@ public class Mark1 extends AppCompatActivity implements ViewDs1{
     @Override
     public void ActivitiesNavigate() {
         Intent intent = new Intent(this, Q1.class);
-        finish();
         startActivity(intent);
     }
 
@@ -57,7 +60,9 @@ public class Mark1 extends AppCompatActivity implements ViewDs1{
 
     @Override
     public void Right() {
-
+        Intent intent = new Intent(this, Winner.class);
+        finish();
+        startActivity(intent);
     }
 
     @Override

@@ -16,10 +16,11 @@ import com.example.ds1.databinding.ActivityQ1Binding;
 
 public class Q1 extends AppCompatActivity implements ViewDs1 {
 
-    TextView tvSc;
+    TextView tvSc,tvQ1task;
     Button btnC1Q1, btnC2Q1, btnC3Q1, btnC4Q1;
     ImageView ivReset;
     PresenterDs1 presenterDS1;
+    GeneralFunction gf;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +32,9 @@ public class Q1 extends AppCompatActivity implements ViewDs1 {
         final MediaPlayer mp = MediaPlayer.create(this, R.raw.ding);
         final MediaPlayer mp2 = MediaPlayer.create(this, R.raw.button_click);
         final MediaPlayer mp3 = MediaPlayer.create(this, R.raw.rewind);
+
         tvSc = findViewById(R.id.tvSc);
+        tvQ1task = findViewById(R.id.tvQ1task);
         ivReset = findViewById(R.id.ivReset);
         btnC1Q1 = findViewById(R.id.btnC1Q1);
         btnC2Q1 = findViewById(R.id.btnC2Q1);
@@ -56,7 +59,6 @@ public class Q1 extends AppCompatActivity implements ViewDs1 {
         ivReset.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mp3.start();
                 countDownTimer.cancel();
                 presenterDS1.Reset();
             }

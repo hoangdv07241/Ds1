@@ -36,6 +36,7 @@ public class PlayerAccess extends AppCompatActivity implements ViewDs1{
         btnGo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                presenterDS1.Other();
                 presenterDS1.ActivitiesNavigate();
             }
         });
@@ -43,7 +44,7 @@ public class PlayerAccess extends AppCompatActivity implements ViewDs1{
 
     @Override
     public void ActivitiesNavigate() {
-        Intent intent = new Intent(this, Q1.class);
+        Intent intent = new Intent(this, MainActivity.class);
         finish();
         startActivity(intent);
     }
