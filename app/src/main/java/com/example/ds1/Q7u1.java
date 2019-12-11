@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
 import android.content.Intent;
-import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.CountDownTimer;
@@ -79,9 +78,8 @@ public class Q7u1 extends AppCompatActivity implements ViewDs1 {
         btnC1Q7u1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mp.start();
                 countDownTimer.cancel();
-                presenterDS1.Right();
+                presenterDS1.Wrong();
             }
         });
         btnC2Q7u1.setOnClickListener(new View.OnClickListener() {
@@ -103,7 +101,7 @@ public class Q7u1 extends AppCompatActivity implements ViewDs1 {
             public void onClick(View view) {
                 mp.start();
                 countDownTimer.cancel();
-                presenterDS1.Other();
+                presenterDS1.Right();
             }
         });
 
