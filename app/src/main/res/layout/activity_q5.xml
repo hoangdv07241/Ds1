@@ -99,7 +99,7 @@
                     android:layout_marginTop="10dp"
                     android:background="#95989A"
                     android:text="@{TextBinding.text5}"
-                    android:textColor="#E1E18F"
+                    android:textColor="#0047FF"
                     android:textSize="25sp" />
 
             </LinearLayout>

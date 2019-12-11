@@ -69,7 +69,7 @@
             android:layout_marginTop="80dp"
             android:textAlignment="center"
             android:text="@{TextBinding.text2}"
-            android:textColor="#FFFFFF"
+            android:textColor="#000000"
             android:textSize="60sp" />
 
         <LinearLayout

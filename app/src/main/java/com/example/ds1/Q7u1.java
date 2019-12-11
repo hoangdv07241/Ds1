@@ -36,19 +36,19 @@ public class Q7u1 extends AppCompatActivity implements ViewDs1 {
         final MediaPlayer mp = MediaPlayer.create(this, R.raw.ding);
         final MediaPlayer mp2 = MediaPlayer.create(this, R.raw.rewind);
         tvTask = findViewById(R.id.tvTask);
-        tvQ7u1sc = findViewById(R.id.tvQ5sc);
-        ivQ7u1Reset = findViewById(R.id.ivQ5Reset);
-        ivQ7u1Home = findViewById(R.id.ivQ5Home);
-        btnC1Q7u1 = findViewById(R.id.btnC1Q5);
-        btnC2Q7u1 = findViewById(R.id.btnC2Q5);
-        btnC3Q7u1 = findViewById(R.id.btnC3Q5);
-        btnC4Q7u1 = findViewById(R.id.btnC4Q5);
+        tvQ7u1sc = findViewById(R.id.tvQ7u1sc);
+        ivQ7u1Reset = findViewById(R.id.ivQ7u1Reset);
+        ivQ7u1Home = findViewById(R.id.ivQ7u1Home);
+        btnC1Q7u1 = findViewById(R.id.btnC1Q7u1);
+        btnC2Q7u1 = findViewById(R.id.btnC2Q7u1);
+        btnC3Q7u1 = findViewById(R.id.btnC3Q7u1);
+        btnC4Q7u1 = findViewById(R.id.btnC4Q7u1);
 
         final CountDownTimer countDownTimer = new CountDownTimer(11000, 1000) {
             @Override
             public void onTick(long l) {
                 tvQ7u1sc.setText(String.valueOf(l / 1000));
-                if ((l / 1000) == 9 || (l / 1000) == 7 || (l / 1000) == 5 || (l / 1000) == 3 || (l / 1000) == 1) {
+                if ((l / 1000) == 4) {
                     tvTask.setText("Trắng");
                 }
             }
@@ -79,8 +79,9 @@ public class Q7u1 extends AppCompatActivity implements ViewDs1 {
         btnC1Q7u1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                mp.start();
                 countDownTimer.cancel();
-                presenterDS1.Wrong();
+                presenterDS1.Right();
             }
         });
         btnC2Q7u1.setOnClickListener(new View.OnClickListener() {
@@ -93,7 +94,6 @@ public class Q7u1 extends AppCompatActivity implements ViewDs1 {
         btnC3Q7u1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mp.start();
                 countDownTimer.cancel();
                 presenterDS1.Wrong();
             }
@@ -101,8 +101,9 @@ public class Q7u1 extends AppCompatActivity implements ViewDs1 {
         btnC4Q7u1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                mp.start();
                 countDownTimer.cancel();
-                presenterDS1.Right();
+                presenterDS1.Other();
             }
         });
 
