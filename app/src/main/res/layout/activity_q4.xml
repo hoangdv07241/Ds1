@@ -41,7 +41,7 @@
                 android:layout_height="70dp"
                 android:layout_gravity="end"
                 android:layout_marginEnd="10dp"
-                android:src="@drawable/reset_ic" />
+                android:src="@drawable/ic_refresh" />
 
             <ImageView
                 android:id="@+id/ivQ4Home"

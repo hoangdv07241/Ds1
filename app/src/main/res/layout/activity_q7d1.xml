@@ -14,7 +14,7 @@
         android:layout_height="match_parent"
         android:background="#373737"
         android:orientation="vertical"
-        tools:context=".Q5">
+        tools:context=".Q7d1">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -26,7 +26,7 @@
             >
 
             <TextView
-                android:id="@+id/tvQ5sc"
+                android:id="@+id/tvQ7d1sc"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:layout_marginEnd="150dp"
@@ -36,7 +36,7 @@
 
 
             <ImageView
-                android:id="@+id/ivQ5Reset"
+                android:id="@+id/ivQ7d1Reset"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:layout_gravity="end"
@@ -44,7 +44,7 @@
                 android:src="@drawable/ic_refresh" />
 
             <ImageView
-                android:id="@+id/ivQ5Home"
+                android:id="@+id/ivQ7d1Home"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:layout_gravity="end"
@@ -61,15 +61,14 @@
             android:textColor="#ffff"
             android:textSize="28sp" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <ImageView
+            android:id="@+id/tvTaskq7d1"
+            android:layout_width="180dp"
+            android:layout_height="130dp"
             android:layout_gravity="center"
             android:layout_marginTop="80dp"
-            android:textAlignment="center"
-            android:text="@{TextBinding.text2}"
-            android:textColor="#F7FF00"
-            android:textSize="60sp" />
+            android:src="@drawable/triangle_pic"
+            android:textAlignment="center" />
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -84,22 +83,22 @@
                 android:orientation="vertical">
 
                 <Button
-                    android:id="@+id/btnC1Q5"
+                    android:id="@+id/btnC1Q7d1"
                     android:layout_width="170dp"
                     android:layout_height="60dp"
                     android:background="#95989A"
                     android:text="@{TextBinding.text3}"
-                    android:textColor="#F7FF00"
+                    android:textColor="#FFFFFF"
                     android:textSize="25sp" />
 
                 <Button
-                    android:id="@+id/btnC3Q5"
+                    android:id="@+id/btnC3Q7d1"
                     android:layout_width="170dp"
                     android:layout_height="60dp"
                     android:layout_marginTop="10dp"
                     android:background="#95989A"
                     android:text="@{TextBinding.text5}"
-                    android:textColor="#0047FF"
+                    android:textColor="#FFFFFF"
                     android:textSize="25sp" />
 
             </LinearLayout>
@@ -111,22 +110,22 @@
                 android:orientation="vertical">
 
                 <Button
-                    android:id="@+id/btnC2Q5"
+                    android:id="@+id/btnC2Q7d1"
                     android:layout_width="170dp"
                     android:layout_height="60dp"
                     android:background="#95989A"
                     android:text="@{TextBinding.text4}"
-                    android:textColor="#FF0000"
+                    android:textColor="#FFFFFF"
                     android:textSize="25sp" />
 
                 <Button
-                    android:id="@+id/btnC4Q5"
+                    android:id="@+id/btnC4Q7d1"
                     android:layout_width="170dp"
                     android:layout_height="60dp"
                     android:layout_marginTop="10dp"
                     android:background="#95989A"
                     android:text="@{TextBinding.text6}"
-                    android:textColor="#B66B00"
+                    android:textColor="#FFFFFF"
                     android:textSize="25sp" />
 
             </LinearLayout>

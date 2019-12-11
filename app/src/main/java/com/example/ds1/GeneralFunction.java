@@ -12,22 +12,6 @@ import android.widget.TextView;
 
 public class GeneralFunction {
 
-    /*public void CountDown(final Context context, final Class<?> cls,final TextView tv) {
-        final CountDownTimer countDownTimer = new CountDownTimer(11000, 1000) {
-            @Override
-            public void onTick(long l) {
-                tv.setText(String.valueOf(l / 1000));
-            }
-
-            @Override
-            public void onFinish() {
-                Intent intent = new Intent(context, cls);
-                finish();
-                startActivity(intent);
-            }
-        }.start();
-    }*/
-
     @SuppressLint("WrongConstant")
     public void TextAnim(TextView tv,int value1,int value2, long duration){
         ObjectAnimator anim = ObjectAnimator.ofInt(tv, "textColor", value1, value2,

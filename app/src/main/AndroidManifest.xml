@@ -9,9 +9,10 @@
         android:roundIcon="@mipmap/ic_logo_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".Q7d1"></activity>
         <activity
             android:name=".Mark1"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Q7u2"
             android:screenOrientation="portrait" />
