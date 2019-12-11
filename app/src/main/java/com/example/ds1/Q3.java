@@ -3,15 +3,11 @@ package com.example.ds1;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
-import android.animation.ArgbEvaluator;
-import android.animation.ObjectAnimator;
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
-import android.view.animation.Animation;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -22,17 +18,17 @@ public class Q3 extends AppCompatActivity implements ViewDs1{
     ImageView ivQ3home;
     TextView tvQ3up,tvQ3left,tvQ3right,tvQ3down,tvQ3sc;
     PresenterDs1 presenterDs1;
-    GeraralFunction gf;
+    GeneralFunction gf;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         ActivityQ3Binding binding = DataBindingUtil.setContentView(this, R.layout.activity_q3);
-        TextBinding textBinding = new TextBinding("UP","LEFT","RIGHT","DOWN",null,null);
+        TextBinding textBinding = new TextBinding("UP","LEFT","CHỌN","DOWN",null,null);
         binding.setTextBinding(textBinding);
 
         presenterDs1 = new PresenterDs1(this);
-        gf = new GeraralFunction();
+        gf = new GeneralFunction();
         ivQ3home = findViewById(R.id.ivQ3home);
         tvQ3sc = findViewById(R.id.tvQ3sc);
         tvQ3up = findViewById(R.id.tvQ3up);
@@ -80,8 +76,7 @@ public class Q3 extends AppCompatActivity implements ViewDs1{
         tvQ3right.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                countDownTimer.cancel();
-                presenterDs1.Wrong();
+
             }
         });
         tvQ3down.setOnClickListener(new View.OnClickListener() {

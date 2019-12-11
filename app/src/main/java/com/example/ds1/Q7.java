@@ -3,36 +3,32 @@ package com.example.ds1;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
-import android.animation.ArgbEvaluator;
-import android.animation.ObjectAnimator;
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
-import android.view.animation.Animation;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.ds1.databinding.ActivityQ3Binding;
+import com.example.ds1.databinding.ActivityQ7Binding;
 
 public class Q7 extends AppCompatActivity implements ViewDs1{
 
     ImageView ivQ7home;
     TextView tvQ7up, tvQ7left, tvQ7right, tvQ7down, tvQ7sc;
     PresenterDs1 presenterDs1;
-    GeraralFunction gf;
+    GeneralFunction gf;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ActivityQ3Binding binding = DataBindingUtil.setContentView(this, R.layout.activity_q7);
-        TextBinding textBinding = new TextBinding("UP","LEFT","RIGHT","DOWN",null,null);
+        ActivityQ7Binding binding = DataBindingUtil.setContentView(this, R.layout.activity_q7);
+        TextBinding textBinding = new TextBinding("UP","LEFT","CHỌN","DOWN",null,null);
         binding.setTextBinding(textBinding);
 
         presenterDs1 = new PresenterDs1(this);
-        gf = new GeraralFunction();
+        gf = new GeneralFunction();
         ivQ7home = findViewById(R.id.ivQ7home);
         tvQ7sc = findViewById(R.id.tvQ7sc);
         tvQ7up = findViewById(R.id.tvQ7up);
@@ -68,28 +64,27 @@ public class Q7 extends AppCompatActivity implements ViewDs1{
             @Override
             public void onClick(View view) {
                 countDownTimer.cancel();
-                presenterDs1.Wrong();
+                presenterDs1.Right();
             }
         });
         tvQ7left.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 countDownTimer.cancel();
-                presenterDs1.Right();
+                presenterDs1.Wrong();
             }
         });
         tvQ7right.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                countDownTimer.cancel();
-                presenterDs1.Wrong();
+
             }
         });
         tvQ7down.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 countDownTimer.cancel();
-                presenterDs1.Wrong();
+                presenterDs1.Other();
             }
         });
     }
@@ -113,7 +108,7 @@ public class Q7 extends AppCompatActivity implements ViewDs1{
 
     @Override
     public void Right() {
-        Intent intent = new Intent(this, Q4.class);
+        Intent intent = new Intent(this, Q7u1.class);
         finish();
         startActivity(intent);
     }
@@ -127,6 +122,8 @@ public class Q7 extends AppCompatActivity implements ViewDs1{
 
     @Override
     public void Other() {
-
+        Intent intent = new Intent(this, Q7u1.class);
+        finish();
+        startActivity(intent);
     }
 }

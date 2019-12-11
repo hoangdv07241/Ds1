@@ -14,7 +14,7 @@
         android:layout_height="match_parent"
         android:background="#373737"
         android:orientation="vertical"
-        tools:context=".Q5">
+        tools:context=".Q7u1">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -26,7 +26,7 @@
             >
 
             <TextView
-                android:id="@+id/tvQ5sc"
+                android:id="@+id/tvQ7u1sc"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:layout_marginEnd="150dp"
@@ -36,7 +36,7 @@
 
 
             <ImageView
-                android:id="@+id/ivQ5Reset"
+                android:id="@+id/ivQ7u1Reset"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:layout_gravity="end"
@@ -44,7 +44,7 @@
                 android:src="@drawable/reset_ic" />
 
             <ImageView
-                android:id="@+id/ivQ5Home"
+                android:id="@+id/ivQ7u1Home"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:layout_gravity="end"
@@ -62,13 +62,14 @@
             android:textSize="28sp" />
 
         <TextView
+            android:id="@+id/tvTask"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="80dp"
             android:textAlignment="center"
             android:text="@{TextBinding.text2}"
-            android:textColor="#F7FF00"
+            android:textColor="#FFFFFF"
             android:textSize="60sp" />
 
         <LinearLayout
@@ -84,22 +85,22 @@
                 android:orientation="vertical">
 
                 <Button
-                    android:id="@+id/btnC1Q5"
+                    android:id="@+id/btnC1Q7u1"
                     android:layout_width="170dp"
                     android:layout_height="60dp"
                     android:background="#95989A"
                     android:text="@{TextBinding.text3}"
-                    android:textColor="#F7FF00"
+                    android:textColor="#FFFFFF"
                     android:textSize="25sp" />
 
                 <Button
-                    android:id="@+id/btnC3Q5"
+                    android:id="@+id/btnC3Q7u1"
                     android:layout_width="170dp"
                     android:layout_height="60dp"
                     android:layout_marginTop="10dp"
                     android:background="#95989A"
                     android:text="@{TextBinding.text5}"
-                    android:textColor="#E1E18F"
+                    android:textColor="#DA00FF"
                     android:textSize="25sp" />
 
             </LinearLayout>
@@ -111,7 +112,7 @@
                 android:orientation="vertical">
 
                 <Button
-                    android:id="@+id/btnC2Q5"
+                    android:id="@+id/btnC2Q7u1"
                     android:layout_width="170dp"
                     android:layout_height="60dp"
                     android:background="#95989A"
@@ -120,13 +121,13 @@
                     android:textSize="25sp" />
 
                 <Button
-                    android:id="@+id/btnC4Q5"
+                    android:id="@+id/btnC4Q7u1"
                     android:layout_width="170dp"
                     android:layout_height="60dp"
                     android:layout_marginTop="10dp"
                     android:background="#95989A"
                     android:text="@{TextBinding.text6}"
-                    android:textColor="#B66B00"
+                    android:textColor="#000000"
                     android:textSize="25sp" />
 
             </LinearLayout>

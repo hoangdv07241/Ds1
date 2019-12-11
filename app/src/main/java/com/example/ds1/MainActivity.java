@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity implements ViewDs1 {
     ImageView ivLeaderboard;
     TextView tvTile1,tvTile2,tvTile3;
     PresenterDs1 presenterDS1;
-    GeraralFunction gf1,gf2,gf3;
+    GeneralFunction gf1,gf2,gf3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,9 +33,9 @@ public class MainActivity extends AppCompatActivity implements ViewDs1 {
 
         final MediaPlayer mp = MediaPlayer.create(this, R.raw.button_click);
         presenterDS1 = new PresenterDs1(this);
-        gf1 = new GeraralFunction();
-        gf2 = new GeraralFunction();
-        gf3 = new GeraralFunction();
+        gf1 = new GeneralFunction();
+        gf2 = new GeneralFunction();
+        gf3 = new GeneralFunction();
 
         ivLeaderboard = findViewById(R.id.ivLeaderboard);
         tvTile1 = findViewById(R.id.tvTitle1);

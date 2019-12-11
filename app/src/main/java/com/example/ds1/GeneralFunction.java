@@ -10,7 +10,7 @@ import android.os.CountDownTimer;
 import android.view.animation.Animation;
 import android.widget.TextView;
 
-public class GeraralFunction {
+public class GeneralFunction {
 
     /*public void CountDown(final Context context, final Class<?> cls,final TextView tv) {
         final CountDownTimer countDownTimer = new CountDownTimer(11000, 1000) {
