@@ -52,6 +52,16 @@ public class Q3 extends AppCompatActivity implements ViewDs1{
             }
         }.start();
 
+        if(GeneralFunction.score == 4){
+            tvQ3up.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    countDownTimer.cancel();
+                    presenterDs1.Help();
+                }
+            });
+        }
+
         ivQ3home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -102,7 +112,9 @@ public class Q3 extends AppCompatActivity implements ViewDs1{
 
     @Override
     public void Help() {
-
+        Intent intent = new Intent(this, Winner.class);
+        finish();
+        startActivity(intent);
     }
 
     @Override

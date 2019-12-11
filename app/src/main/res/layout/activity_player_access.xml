@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="TextBinding"
+            type="com.example.ds1.TextBinding" />
+    </data>
+
+    <LinearLayout xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#373737"
+        android:orientation="vertical"
+        android:padding="10dp"
+        tools:context=".PlayerAccess">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="100dp"
+            android:text="@{TextBinding.text1}"
+            android:textAlignment="center"
+            android:textColor="#fff"
+            android:textSize="40sp" />
+
+        <EditText
+            android:id="@+id/edtPlayer"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="140dp"
+            android:textColor="#fff"
+            />
+
+        <Button
+            android:id="@+id/btnGo"
+            android:layout_width="250dp"
+            android:layout_height="75dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="70dp"
+            android:background="#95989A"
+            android:text="@{TextBinding.text2}"
+            android:textColor="#fff"
+            android:textSize="40sp" />
+
+    </LinearLayout>
+</layout>

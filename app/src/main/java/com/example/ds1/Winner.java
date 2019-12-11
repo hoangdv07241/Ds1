@@ -9,38 +9,37 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.example.ds1.databinding.ActivityMark1Binding;
+import com.example.ds1.databinding.ActivityWinnerBinding;
 
-public class Mark1 extends AppCompatActivity implements ViewDs1{
+public class Winner extends AppCompatActivity implements ViewDs1{
 
-    Button btnMarkReturn;
+    Button btnWinner;
     PresenterDs1 presenterDS1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ActivityMark1Binding binding = DataBindingUtil.setContentView(this, R.layout.activity_mark1);
-        TextBinding textBinding = new TextBinding("Chúc mừng bạn được 1 điểm !!!", "+1", "CHẤP NHẬN", null, null, null);
+        ActivityWinnerBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_winner);
+        TextBinding textBinding = new TextBinding("Xin chúc mừng", "CHẤP NHẬN", null, null, null, null);
         binding.setTextBinding(textBinding);
 
-        final MediaPlayer mp = MediaPlayer.create(this,R.raw.cash);
+        final MediaPlayer mp = MediaPlayer.create(this,R.raw.applause);
         mp.start();
 
         presenterDS1 = new PresenterDs1(this);
-        btnMarkReturn = findViewById(R.id.btnMarkReturn);
+        btnWinner = findViewById(R.id.btnWinner);
 
-        btnMarkReturn.setOnClickListener(new View.OnClickListener() {
+        btnWinner.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 presenterDS1.ActivitiesNavigate();
-                GeneralFunction.score++;
             }
         });
     }
 
     @Override
     public void ActivitiesNavigate() {
-        Intent intent = new Intent(this, Q1.class);
+        Intent intent = new Intent(this, PlayerAccess.class);
         finish();
         startActivity(intent);
     }

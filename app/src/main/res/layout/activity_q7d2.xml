@@ -1,9 +1,136 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".Q7d2">
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <data>
+
+        <variable
+            name="TextBinding"
+            type="com.example.ds1.TextBinding" />
+    </data>
+
+    <LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#373737"
+        android:orientation="vertical"
+        tools:context=".Q7d2">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="end"
+            >
+
+            <TextView
+                android:id="@+id/tvQ7d2sc"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginEnd="150dp"
+                android:textAlignment="center"
+                android:textColor="#fff"
+                android:textSize="50sp" />
+
+
+            <ImageView
+                android:id="@+id/ivQ7d2Reset"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="end"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/ic_refresh" />
+
+            <ImageView
+                android:id="@+id/ivQ7d2Home"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="end"
+                android:src="@drawable/ic_home" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp"
+            android:text="@{TextBinding.text1}"
+            android:textColor="#ffff"
+            android:textSize="28sp" />
+
+        <ImageView
+            android:id="@+id/tvTaskq7d2"
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="80dp"
+            android:src="@drawable/square"
+            android:textAlignment="center" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="140dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btnC1Q7d2"
+                    android:layout_width="170dp"
+                    android:layout_height="60dp"
+                    android:background="#95989A"
+                    android:text="@{TextBinding.text3}"
+                    android:textColor="#FFFFFF"
+                    android:textSize="25sp" />
+
+                <Button
+                    android:id="@+id/btnC3Q7d2"
+                    android:layout_width="170dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#95989A"
+                    android:text="@{TextBinding.text5}"
+                    android:textColor="#FFFFFF"
+                    android:textSize="25sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btnC2Q7d2"
+                    android:layout_width="170dp"
+                    android:layout_height="60dp"
+                    android:background="#95989A"
+                    android:text="@{TextBinding.text4}"
+                    android:textColor="#FFFFFF"
+                    android:textSize="25sp" />
+
+                <Button
+                    android:id="@+id/btnC4Q7d2"
+                    android:layout_width="170dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#95989A"
+                    android:text="@{TextBinding.text6}"
+                    android:textColor="#FFFFFF"
+                    android:textSize="25sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

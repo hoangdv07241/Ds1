@@ -1,18 +1,23 @@
 package com.example.ds1.Model;
 
 public class Score {
-    String ScoreCode,Player;
-    int Rank,Score;
+    String PlayerCode,Player;
 
-    public Score(String scoreCode, String player, int rank, int score) {
-        ScoreCode = scoreCode;
+    public Score(String playerCode, String player) {
+        PlayerCode = playerCode;
         Player = player;
-        Rank = rank;
-        Score = score;
     }
 
     public Score(String player) {
         Player = player;
+    }
+
+    public String getPlayerCode() {
+        return PlayerCode;
+    }
+
+    public void setPlayerCode(String playerCode) {
+        PlayerCode = playerCode;
     }
 
     public String getPlayer() {
@@ -23,27 +28,4 @@ public class Score {
         Player = player;
     }
 
-    public int getRank() {
-        return Rank;
-    }
-
-    public void setRank(int rank) {
-        Rank = rank;
-    }
-
-    public String getScoreCode() {
-        return ScoreCode;
-    }
-
-    public void setScoreCode(String scoreCode) {
-        ScoreCode = scoreCode;
-    }
-
-    public int getScore() {
-        return Score;
-    }
-
-    public void setScore(int score) {
-        Score = score;
-    }
 }

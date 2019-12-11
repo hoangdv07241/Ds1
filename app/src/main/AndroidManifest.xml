@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_logo_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Q7d2"></activity>
+        <activity android:name=".Winner"></activity>
+        <activity android:name=".PlayerAccess" />
+        <activity android:name=".Nopoint" />
+        <activity android:name=".Q7d2" />
         <activity android:name=".Q3d1" />
         <activity android:name=".Q7d1" />
         <activity

@@ -17,7 +17,7 @@ import com.example.ds1.databinding.ActivityQ7d1Binding;
 public class Q7d1 extends AppCompatActivity implements ViewDs1 {
 
     TextView tvQ7d1sc;
-    ImageView ivQ7d1Reset, ivQ7d1Home, tvTaskq7d1;
+    ImageView ivQ7d1Reset, ivQ7d1Home, ivTaskq7d1;
     Button btnC1Q7d1, btnC2Q7d1, btnC3Q7d1, btnC4Q7d1;
     PresenterDs1 presenterDS1;
     GeneralFunction gf;
@@ -28,7 +28,7 @@ public class Q7d1 extends AppCompatActivity implements ViewDs1 {
         super.onCreate(savedInstanceState);
         ActivityQ7d1Binding binding = DataBindingUtil.setContentView(this, R.layout.activity_q7d1);
         TextBinding textBinding = new TextBinding("Đây là hình gì ?", null, "tam giác",
-                "vuông", "tròn", "hình thang");
+                "vuông", "tam giác lệch", "hình thang");
         binding.setTextBinding(textBinding);
 
         presenterDS1 = new PresenterDs1(this);
@@ -37,7 +37,7 @@ public class Q7d1 extends AppCompatActivity implements ViewDs1 {
         final MediaPlayer mp = MediaPlayer.create(this, R.raw.ding);
         final MediaPlayer mp2 = MediaPlayer.create(this, R.raw.rewind);
 
-        tvTaskq7d1 = findViewById(R.id.tvTaskq7d1);
+        ivTaskq7d1 = findViewById(R.id.ivTaskq7d1);
         tvQ7d1sc = findViewById(R.id.tvQ7d1sc);
         ivQ7d1Reset = findViewById(R.id.ivQ7d1Reset);
         ivQ7d1Home = findViewById(R.id.ivQ7d1Home);
@@ -73,6 +73,20 @@ public class Q7d1 extends AppCompatActivity implements ViewDs1 {
             public void onClick(View view) {
                 countDownTimer.cancel();
                 presenterDS1.ActivitiesNavigate();
+            }
+        });
+        ivTaskq7d1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ivTaskq7d1.setRotation(ivTaskq7d1.getRotation() + 90);
+                btnC3Q7d1.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        mp.start();
+                        countDownTimer.cancel();
+                        presenterDS1.Other();
+                    }
+                });
             }
         });
         btnC1Q7d1.setOnClickListener(new View.OnClickListener() {
@@ -142,6 +156,8 @@ public class Q7d1 extends AppCompatActivity implements ViewDs1 {
 
     @Override
     public void Other() {
-
+        Intent intent = new Intent(this, Mark1.class);
+        finish();
+        startActivity(intent);
     }
 }

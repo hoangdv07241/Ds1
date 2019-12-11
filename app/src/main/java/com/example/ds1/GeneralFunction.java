@@ -12,6 +12,8 @@ import android.widget.TextView;
 
 public class GeneralFunction {
 
+    static public int score = 0;
+
     @SuppressLint("WrongConstant")
     public void TextAnim(TextView tv,int value1,int value2, long duration){
         ObjectAnimator anim = ObjectAnimator.ofInt(tv, "textColor", value1, value2,

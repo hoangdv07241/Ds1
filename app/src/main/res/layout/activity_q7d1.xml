@@ -62,7 +62,7 @@
             android:textSize="28sp" />
 
         <ImageView
-            android:id="@+id/tvTaskq7d1"
+            android:id="@+id/ivTaskq7d1"
             android:layout_width="180dp"
             android:layout_height="130dp"
             android:layout_gravity="center"
