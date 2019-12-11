@@ -9,13 +9,15 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.ds1.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity implements ViewDs1 {
 
-    public Button btnStart, btnHelp, btnExit;
+    public Button btnStart, btnHelp;
+    ImageView ivLeaderboard;
     TextView tvTile1,tvTile2,tvTile3;
     PresenterDs1 presenterDS1;
     GeraralFunction gf1,gf2,gf3;
@@ -35,15 +37,23 @@ public class MainActivity extends AppCompatActivity implements ViewDs1 {
         gf2 = new GeraralFunction();
         gf3 = new GeraralFunction();
 
+        ivLeaderboard = findViewById(R.id.ivLeaderboard);
         tvTile1 = findViewById(R.id.tvTitle1);
         tvTile2 = findViewById(R.id.tvTitle2);
         tvTile3 = findViewById(R.id.tvTitle3);
         btnStart = findViewById(R.id.btnStart);
         btnHelp = findViewById(R.id.btnHelp);
 
-        gf1.TextAnim(tvTile1, Color.WHITE,Color.RED);
-        gf2.TextAnim(tvTile2, Color.GREEN, Color.WHITE);
-        gf3.TextAnim(tvTile3, Color.WHITE, Color.BLUE);
+        gf1.TextAnim(tvTile1, Color.WHITE,Color.RED,1500);
+        gf2.TextAnim(tvTile2, Color.WHITE, Color.GREEN,1450);
+        gf3.TextAnim(tvTile3, Color.WHITE, Color.BLUE,1400);
+
+        ivLeaderboard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
 
         btnStart.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -14,7 +14,7 @@
         android:layout_height="match_parent"
         android:background="#373737"
         android:orientation="vertical"
-        tools:context=".Q4">
+        tools:context=".Q5">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -26,7 +26,7 @@
             >
 
             <TextView
-                android:id="@+id/tvQ4sc"
+                android:id="@+id/tvQ5sc"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:layout_marginEnd="150dp"
@@ -36,7 +36,7 @@
 
 
             <ImageView
-                android:id="@+id/ivQ4Reset"
+                android:id="@+id/ivQ5Reset"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:layout_gravity="end"
@@ -44,7 +44,7 @@
                 android:src="@drawable/reset_ic" />
 
             <ImageView
-                android:id="@+id/ivQ4Home"
+                android:id="@+id/ivQ5Home"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:layout_gravity="end"
@@ -66,15 +66,16 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="80dp"
+            android:textAlignment="center"
             android:text="@{TextBinding.text2}"
-            android:textColor="#FF0000"
-            android:textSize="120sp" />
+            android:textColor="#F7FF00"
+            android:textSize="60sp" />
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="90dp"
+            android:layout_marginTop="140dp"
             android:orientation="horizontal">
 
             <LinearLayout
@@ -83,22 +84,22 @@
                 android:orientation="vertical">
 
                 <Button
-                    android:id="@+id/btnC1Q4"
+                    android:id="@+id/btnC1Q5"
                     android:layout_width="170dp"
                     android:layout_height="60dp"
                     android:background="#95989A"
                     android:text="@{TextBinding.text3}"
-                    android:textColor="#FF0000"
+                    android:textColor="#F7FF00"
                     android:textSize="25sp" />
 
                 <Button
-                    android:id="@+id/btnC3Q4"
+                    android:id="@+id/btnC3Q5"
                     android:layout_width="170dp"
                     android:layout_height="60dp"
                     android:layout_marginTop="10dp"
                     android:background="#95989A"
                     android:text="@{TextBinding.text5}"
-                    android:textColor="#D900FF"
+                    android:textColor="#0019FF"
                     android:textSize="25sp" />
 
             </LinearLayout>
@@ -110,22 +111,22 @@
                 android:orientation="vertical">
 
                 <Button
-                    android:id="@+id/btnC2Q4"
+                    android:id="@+id/btnC2Q5"
                     android:layout_width="170dp"
                     android:layout_height="60dp"
                     android:background="#95989A"
                     android:text="@{TextBinding.text4}"
-                    android:textColor="#00FF0B"
+                    android:textColor="#FF0000"
                     android:textSize="25sp" />
 
                 <Button
-                    android:id="@+id/btnC4Q4"
+                    android:id="@+id/btnC4Q5"
                     android:layout_width="170dp"
                     android:layout_height="60dp"
                     android:layout_marginTop="10dp"
                     android:background="#95989A"
                     android:text="@{TextBinding.text6}"
-                    android:textColor="#000000"
+                    android:textColor="#B66B00"
                     android:textSize="25sp" />
 
             </LinearLayout>

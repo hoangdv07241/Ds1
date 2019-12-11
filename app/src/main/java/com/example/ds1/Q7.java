@@ -17,74 +17,75 @@ import android.widget.TextView;
 
 import com.example.ds1.databinding.ActivityQ3Binding;
 
-public class Q3 extends AppCompatActivity implements ViewDs1{
+public class Q7 extends AppCompatActivity implements ViewDs1{
 
-    ImageView ivQ3home;
-    TextView tvQ3up,tvQ3left,tvQ3right,tvQ3down,tvQ3sc;
+    ImageView ivQ7home;
+    TextView tvQ7up, tvQ7left, tvQ7right, tvQ7down, tvQ7sc;
     PresenterDs1 presenterDs1;
     GeraralFunction gf;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ActivityQ3Binding binding = DataBindingUtil.setContentView(this, R.layout.activity_q3);
+        ActivityQ3Binding binding = DataBindingUtil.setContentView(this, R.layout.activity_q7);
         TextBinding textBinding = new TextBinding("UP","LEFT","RIGHT","DOWN",null,null);
         binding.setTextBinding(textBinding);
 
         presenterDs1 = new PresenterDs1(this);
         gf = new GeraralFunction();
-        ivQ3home = findViewById(R.id.ivQ3home);
-        tvQ3sc = findViewById(R.id.tvQ3sc);
-        tvQ3up = findViewById(R.id.tvQ3up);
-        tvQ3left = findViewById(R.id.tvQ3left);
-        tvQ3right = findViewById(R.id.tvQ3right);
-        tvQ3down = findViewById(R.id.tvQ3down);
+        ivQ7home = findViewById(R.id.ivQ7home);
+        tvQ7sc = findViewById(R.id.tvQ7sc);
+        tvQ7up = findViewById(R.id.tvQ7up);
+        tvQ7left = findViewById(R.id.tvQ7left);
+        tvQ7right = findViewById(R.id.tvQ7right);
+        tvQ7down = findViewById(R.id.tvQ7down);
 
-        gf.TextAnim(tvQ3up,Color.WHITE,Color.RED,500);
+        gf.TextAnim(tvQ7up,Color.WHITE,Color.RED,500);
+        gf.TextAnim(tvQ7down,Color.WHITE,Color.GREEN,500);
 
         final CountDownTimer countDownTimer = new CountDownTimer(11000, 1000) {
             @Override
             public void onTick(long l) {
-                tvQ3sc.setText(String.valueOf(l / 1000));
+                tvQ7sc.setText(String.valueOf(l / 1000));
             }
 
             @Override
             public void onFinish() {
-                Intent intent = new Intent(Q3.this, Lose.class);
+                Intent intent = new Intent(Q7.this, Lose.class);
                 finish();
                 startActivity(intent);
             }
         }.start();
 
-        ivQ3home.setOnClickListener(new View.OnClickListener() {
+        ivQ7home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 countDownTimer.cancel();
                 presenterDs1.ActivitiesNavigate();
             }
         });
-        tvQ3up.setOnClickListener(new View.OnClickListener() {
+        tvQ7up.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 countDownTimer.cancel();
                 presenterDs1.Wrong();
             }
         });
-        tvQ3left.setOnClickListener(new View.OnClickListener() {
+        tvQ7left.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 countDownTimer.cancel();
                 presenterDs1.Right();
             }
         });
-        tvQ3right.setOnClickListener(new View.OnClickListener() {
+        tvQ7right.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 countDownTimer.cancel();
                 presenterDs1.Wrong();
             }
         });
-        tvQ3down.setOnClickListener(new View.OnClickListener() {
+        tvQ7down.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 countDownTimer.cancel();
@@ -128,5 +129,4 @@ public class Q3 extends AppCompatActivity implements ViewDs1{
     public void Other() {
 
     }
-
 }

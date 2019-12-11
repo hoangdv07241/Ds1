@@ -29,10 +29,10 @@ public class GeraralFunction {
     }*/
 
     @SuppressLint("WrongConstant")
-    public void TextAnim(TextView tv,int value1,int value2){
+    public void TextAnim(TextView tv,int value1,int value2, long duration){
         ObjectAnimator anim = ObjectAnimator.ofInt(tv, "textColor", value1, value2,
                 value1);
-        anim.setDuration(1500);
+        anim.setDuration(duration);
         anim.setEvaluator(new ArgbEvaluator());
         anim.setRepeatMode(Animation.REVERSE);
         anim.setRepeatCount(Animation.INFINITE);
