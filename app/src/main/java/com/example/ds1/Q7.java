@@ -122,7 +122,7 @@ public class Q7 extends AppCompatActivity implements ViewDs1{
 
     @Override
     public void Other() {
-        Intent intent = new Intent(this, Q7u1.class);
+        Intent intent = new Intent(this, Q7d1.class);
         finish();
         startActivity(intent);
     }
