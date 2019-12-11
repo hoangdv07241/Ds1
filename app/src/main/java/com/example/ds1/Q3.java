@@ -83,7 +83,7 @@ public class Q3 extends AppCompatActivity implements ViewDs1{
             @Override
             public void onClick(View view) {
                 countDownTimer.cancel();
-                presenterDs1.Wrong();
+                presenterDs1.Other();
             }
         });
     }
@@ -121,7 +121,9 @@ public class Q3 extends AppCompatActivity implements ViewDs1{
 
     @Override
     public void Other() {
-
+        Intent intent = new Intent(this, Q3d1.class);
+        finish();
+        startActivity(intent);
     }
 
 }
